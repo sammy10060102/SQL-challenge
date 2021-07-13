@@ -1,4 +1,6 @@
+--1.List the following details of each employee: employee number, last name, first name, sex, and salary.
 DROP VIEW emp_salary;
+
 CREATE VIEW emp_salary AS 
 SELECT e.emp_no, e.first_name, e.last_name, e.sex, s.salary
 FROM employees AS e
@@ -63,7 +65,7 @@ ON d.dept_no = de.dept_no
 WHERE (dept_name = 'Sales'
 OR dept_name = 'Development');
 
--- In descending order, list the frequency count of employee last names, 
+-- 8. In descending order, list the frequency count of employee last names, 
 -- i.e., how many employees share each last name.
 
 SELECT last_name, COUNT(last_name)
